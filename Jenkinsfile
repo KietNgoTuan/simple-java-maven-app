@@ -7,7 +7,7 @@ node {
 			mavenImage.inside("-u root -v /root/.m2:/root/.m2"){ 
 
 				stage('Build'){
-				    sh 'mvn -B -DskipTests clean package'
+				    sh 'mvn -v'
 				}
 				stage('Test') {
 				    try{
